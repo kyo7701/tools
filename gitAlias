@@ -1,0 +1,10 @@
+[user]
+	name = 24k
+	email = 007924.ok@163.com
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+[push]
+	default = matching
