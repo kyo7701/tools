@@ -1,0 +1,28 @@
+function jump { 
+    cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
+}
+function mark { 
+    mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
+}
+function unmark { 
+    rm -i "$MARKPATH/$1"
+}
+function marks {
+    ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
+}
+
+function ca {
+   echo "please enter commit message"
+   read commitMessage
+   git add . && git ci -a -m $commitMessage
+}
+
+function init {
+  echo 'please enter your repositoryname'
+   read repositoryname
+  repository="$repositoryname"".git"
+  echo $repository
+  git add .
+  git ci -a -m "initial commit"
+  git remote add origin github:kyo7701/$repository
+}
