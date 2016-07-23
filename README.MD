@@ -1,10 +1,10 @@
-####Mac shell常用命令封装
+#### **Mac shell常用命令封装**
 
-#### 注意
+#### **注意**
 
 需要安装oh my zsh!
 
-#### 安装
+#### **安装**
 
 clone this repo,进入shell,切到repo目录,执行以下命令,即可使用下面的shell命令和git alias
 
@@ -12,7 +12,7 @@ clone this repo,进入shell,切到repo目录,执行以下命令,即可使用下�
 ./install.sh
 ```
 
-##### shell 命令 ca
+##### **shell 命令 ca**
 
 需要输入commit message,等价于下述命令
 
@@ -22,7 +22,7 @@ git ci -a -m "commit message"
 
 ```
 
-##### shell 命令init 
+##### **shell 命令 init**
 需要输入远程仓库的名称,等价于以下命令
 
 ```
@@ -31,7 +31,7 @@ git ci -a -m "initial commit"
 git remote add origin github:username/repository.git
 ```
 
-##### git alias
+##### **git alias**
 
 [user]
 
