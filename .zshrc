@@ -98,6 +98,11 @@ function marks {
     ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 }
 
+function ca {
+   echo "please enter commit message"
+   read commitMessage
+   git add . && git ci -a -m $commitMessage
+}
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export NVM_DIR="/Users/24k/.nvm"
