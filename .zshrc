@@ -103,6 +103,17 @@ function ca {
    read commitMessage
    git add . && git ci -a -m $commitMessage
 }
+
+function init {
+  echo 'please enter your repositoryname'
+   read repositoryname
+  repository="$repositoryname"".git"
+  echo $repository
+  git add .
+  git ci -a -m "initial commit"
+  git remote add origin github:kyo7701/$repository
+}
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export NVM_DIR="/Users/24k/.nvm"

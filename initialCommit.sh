@@ -1,6 +1,5 @@
 #!/bin/bash
 echo 'please enter your repositoryname'
-
 read repositoryname
 repository="$repositoryname"".git"
 echo $repository
